@@ -1,6 +1,6 @@
 # E-Commerce Platform
 
-A full-stack e-commerce web application built to gain end-to-end experience across the modern web stack — frontend with backend, database, payments, and authentication (on-going).
+A full-stack e-commerce web application built to gain end-to-end experience across the modern web stack — frontend, backend, database, payments, and authentication.
 
 ## 📊 Overview
 
@@ -37,3 +37,6 @@ ecommerce-store/
 ## 🚀 Key Takeaway
 
 Building the payment and auth layers from scratch — not just the UI — was the goal here: understanding how a cart, a checkout session, and a user session actually connect end to end.
+
+
+Full-stack e-commerce platform in progress — React frontend built, backend (Node.js, Stripe, JWT) in development.

@@ -1,16 +1,39 @@
-# React + Vite
+# E-Commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce web application built to gain end-to-end experience across the modern web stack — frontend, backend, database, payments, and authentication.
 
-Currently, two official plugins are available:
+## 📊 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Rather than a frontend-only demo, this project covers the full flow of a real online store: browsing products, managing a cart, secure checkout, and authenticated user accounts.
 
-## React Compiler
+## 🛠️ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Product catalog and browsing
+- Shopping cart functionality
+- Secure checkout with **Stripe** payment integration
+- User authentication via **JWT**
+- RESTful API backend
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:** React 18
+**Backend:** Node.js, Express
+**Database:** MongoDB
+**Payments:** Stripe
+**Auth:** JWT (JSON Web Tokens)
+
+## 📁 Structure
+
+```
+ecommerce-store/
+├── client/          # React frontend
+├── server/          # Node.js/Express backend
+│   ├── routes/
+│   ├── models/
+│   └── controllers/
+└── README.md
+```
+
+## 🚀 Key Takeaway
+
+Building the payment and auth layers from scratch — not just the UI — was the goal here: understanding how a cart, a checkout session, and a user session actually connect end to end.

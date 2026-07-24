@@ -1,6 +1,6 @@
 # E-Commerce Platform
 
-A full-stack e-commerce web application built to gain end-to-end experience across the modern web stack — frontend, backend, database, payments, and authentication.
+A full-stack e-commerce web application built to gain end-to-end experience across the modern web stack — frontend with backend, database, payments, and authentication (on-going).
 
 ## 📊 Overview
 

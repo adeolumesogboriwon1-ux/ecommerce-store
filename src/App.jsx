@@ -1,27 +1,71 @@
 import { useState, useEffect } from "react"
 
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:3001/api"
+
 function App() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [cart, setCart] = useState([])
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [cartOpen, setCartOpen] = useState(false)
+  const [checkoutMessage, setCheckoutMessage] = useState("")
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch(`${API_URL}/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data)
+        setLoading(false)
+      })
+      .catch(() => {
+        setProducts([])
         setLoading(false)
       })
   }, [])
 
   const addToCart = (product) => {
     setCart([...cart, product])
+    setCheckoutMessage("")
   }
 
   const removeFromCart = (index) => {
     setCart(cart.filter((_, i) => i !== index))
+  }
+
+  const handleCheckout = async () => {
+    if (cart.length === 0) {
+      setCheckoutMessage("Your cart is empty.")
+      setCartOpen(true)
+      return
+    }
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0)
+
+    try {
+      const response = await fetch(`${API_URL}/create-checkout-session`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: cart, total })
+      })
+
+      const data = await response.json()
+      if (!response.ok) {
+        throw new Error(data?.error || "Checkout failed")
+      }
+
+      if (data.url) {
+        window.location.href = data.url
+        return
+      }
+
+      setCheckoutMessage("Order placed successfully!")
+      setCart([])
+      setCartOpen(true)
+    } catch (error) {
+      const message = error?.message || "Could not place your order right now."
+      setCheckoutMessage(message)
+      setCartOpen(true)
+    }
   }
 
   const total = cart.reduce((sum, item) => sum + item.price, 0)
@@ -133,7 +177,13 @@ function App() {
                 <span className="font-bold text-gray-800">Total</span>
                 <span className="font-bold text-blue-600">${total.toFixed(2)}</span>
               </div>
-              <button className="bg-blue-600 text-white w-full py-3 rounded-xl font-medium">
+              {checkoutMessage && (
+                <p className="mb-3 text-sm text-center text-green-600">{checkoutMessage}</p>
+              )}
+              <button
+                onClick={handleCheckout}
+                className="bg-blue-600 text-white w-full py-3 rounded-xl font-medium"
+              >
                 Checkout
               </button>
             </div>

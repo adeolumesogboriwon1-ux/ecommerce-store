@@ -1,0 +1,104 @@
+[
+  {
+    "id": "sess_123",
+    "createdAt": "2026-07-29T00:07:13.184Z",
+    "items": [
+      {
+        "description": "Bloom Dress",
+        "amount": 7425,
+        "quantity": 1
+      }
+    ],
+    "total": 74.25
+  },
+  {
+    "id": "sess_sig_1",
+    "createdAt": "2026-07-29T00:07:13.198Z",
+    "items": [],
+    "total": 10
+  },
+  {
+    "id": "sess_signed_1",
+    "createdAt": "2026-07-29T00:07:13.208Z",
+    "items": [
+      {
+        "description": "Signed Item",
+        "amount": 2500,
+        "quantity": 1
+      }
+    ],
+    "total": 25
+  },
+  {
+    "id": "sess_123",
+    "createdAt": "2026-07-29T00:08:15.557Z",
+    "items": [
+      {
+        "description": "Bloom Dress",
+        "amount": 7425,
+        "quantity": 1
+      }
+    ],
+    "total": 74.25
+  },
+  {
+    "id": "sess_signed_1",
+    "createdAt": "2026-07-29T00:08:15.581Z",
+    "items": [
+      {
+        "description": "Signed Item",
+        "amount": 2500,
+        "quantity": 1
+      }
+    ],
+    "total": 25
+  },
+  {
+    "id": "sess_123",
+    "createdAt": "2026-07-29T00:17:10.245Z",
+    "items": [
+      {
+        "description": "Bloom Dress",
+        "amount": 7425,
+        "quantity": 1
+      }
+    ],
+    "total": 74.25
+  },
+  {
+    "id": "sess_signed_1",
+    "createdAt": "2026-07-29T00:17:10.265Z",
+    "items": [
+      {
+        "description": "Signed Item",
+        "amount": 2500,
+        "quantity": 1
+      }
+    ],
+    "total": 25
+  },
+  {
+    "id": "sess_123",
+    "createdAt": "2026-07-29T00:25:08.492Z",
+    "items": [
+      {
+        "description": "Bloom Dress",
+        "amount": 7425,
+        "quantity": 1
+      }
+    ],
+    "total": 74.25
+  },
+  {
+    "id": "sess_signed_1",
+    "createdAt": "2026-07-29T00:25:08.511Z",
+    "items": [
+      {
+        "description": "Signed Item",
+        "amount": 2500,
+        "quantity": 1
+      }
+    ],
+    "total": 25
+  }
+]

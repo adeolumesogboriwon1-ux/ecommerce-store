@@ -5,13 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:backend": "node -r dotenv/config server/server.js",
+    "test:backend": "node --test server/server.test.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.0",
+    "stripe": "^18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
